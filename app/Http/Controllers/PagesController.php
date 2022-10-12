@@ -14,5 +14,7 @@ class PagesController extends Controller
         return view('register.register');
     }
 
-
+    public function store(Request $request){
+        var_dump( $request->input('username') );
+    }
 }

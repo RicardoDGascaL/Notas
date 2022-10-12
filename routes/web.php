@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PagesController@index');
-Route::get('/register', 'PagesController@register');
+Route::get('/', 'PagesController@index')->name('login');
+Route::get('/register', 'PagesController@register')->name('registro');
+Route::post('/loggearme', 'PagesController@store')->name('loggearme');
 

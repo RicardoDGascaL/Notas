@@ -1,21 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-</head>
-<body>
-    <h2>Login</h2>
-    <div class="container">
-        <form action="">
-            <label for="">Email</label>
-            <input type="text" name="texto" id="email" placeholder="Email" required>
-            <label for="password"> Password</label>
-            <input type="password" name="password" id="password" placeholder="Password" required>
-            <input type="submit" value="Iniciar">
+@extends('template.index')
+@section('title','Login')
+@section('contenido')
+
+<div class="row">
+    <div class="col-4 col-sm-12 col-md-4 col-lg-4 offset-md-4 offset-lg-4">
+        <form action="{{route('loggearme')}}" method="POST" class="bordered shadow border-radius p-5">
+            <div class="container-fluid">
+                <h1 class="navbar-brand">@yield('title')</h1>
+            </div>
+            <div class="row">
+                @csrf
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 p-2">
+                    <div class="form-group mt-4">
+                        <label for="username">Username : </label>
+                        <input type="text" name="username" class="form-control mt-2" placeholder="Username" id="username">
+                    </div>
+                </div>
+                
+                <div class="form-group mt-4">
+                    <label for="password">Password : </label>
+                    <input type="password" name="passwd" class="form-control mt-2" placeholder="Password" id="password">
+                </div>
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-primary mt-2">Login</button>
+                </div>
+            </div>
         </form>
     </div>
-</body>
-</html>
+</div>
+@endsection
