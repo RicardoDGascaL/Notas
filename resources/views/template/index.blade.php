@@ -7,12 +7,19 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
 </head>
-<body>
-<nav class="navbar bg-primary">
+<body class="bg-dark">
+<nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <form class="d-flex" role="search">
-      <button class="btn btn-outline-success" type="submit"></button>
-    </form>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a href="#" class="nav-link active" aria-current="page">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="" class="nav-link active" aria-current="page">Register</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
     <div class="container-fluid mt-5">
