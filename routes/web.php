@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@index')->name('login');
 Route::get('/register', 'PagesController@register')->name('registro');
+Route::get('/perfil', 'perfilController@perfil')->name('perfil');
 Route::post('/loggearme', 'PagesController@store')->name('loggearme');
 
