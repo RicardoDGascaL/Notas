@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
 </head>
 <body class="bg-dark">
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand bg-light">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a href="#" class="nav-link active" aria-current="page">Login</a>
+          <a href="/" class="nav-link active" aria-current="page">Login</a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link active" aria-current="page">Register</a>
+          <a href="/register" class="nav-link active" aria-current="page">Register</a>
         </li>
       </ul>
     </div>
