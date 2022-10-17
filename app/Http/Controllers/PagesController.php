@@ -17,7 +17,8 @@ class PagesController extends Controller
 
     public function store(Request $request){
 
-        var_dump( $request->input('username') );
+        var_dump( $request->input('email') );
+        var_dump( $request->input('password') );
 
         
        /* validar campos de login y registro 

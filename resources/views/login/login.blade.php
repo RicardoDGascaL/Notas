@@ -16,9 +16,9 @@
                 @csrf
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 p-2">
                     <div class="form-group mt-4">
-                        <label for="username">Username : </label>
-                        <input type="text" name="username" class="form-control mt-2" value="{{ old('username') }}" placeholder="Username" id="username">
-                        {!! $errors->first('username', '<p class="text-danger">:message</p>') !!}
+                        <label for="email">Email : </label>
+                        <input type="text" name="email" class="form-control mt-2" value="{{ old('email') }}" placeholder="Email" id="email">
+                        {!! $errors->first('email', '<p class="text-danger">:message</p>') !!}
                     </div>
                 </div>
                 

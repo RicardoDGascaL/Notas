@@ -57,6 +57,14 @@
                       <button class="btn btn-danger px-3 py-2 mx-3 my-3">Eliminar</button>
                       <button class="btn btn-primary px-3 py-2 mx-3 my-3">Actualizar</button>
                     </div>
+                    <ul>
+                      @forelse($portafolio as $portafolioItem)
+                        <h2> {{ $portafolioItem ->title }}</h2>
+                        <p> {{ $portafolioItem ->descripcion }}</p>
+                        @empty
+                          <p>No hay proyectos mostrados</p>
+                      @endforelse
+                    </ul>
                   </div>
                 </div>
               </div>
