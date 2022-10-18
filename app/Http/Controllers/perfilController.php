@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use DB;
+Use App\Nota;
 use Illuminate\Http\Request;
 
 class perfilController extends Controller
@@ -10,8 +10,8 @@ class perfilController extends Controller
     public function perfil(){
 
 
-        $portafolio = DB::table('notas')->get();
+        $notas = Nota::latest('updated_at')->get();
 
-        return view('perfil.perfil', compact('portafolio'));
+        return view('perfil.perfil', compact('notas'));
     }
 }

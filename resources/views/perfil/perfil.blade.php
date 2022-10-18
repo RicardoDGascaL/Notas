@@ -58,9 +58,10 @@
                       <button class="btn btn-primary px-3 py-2 mx-3 my-3">Actualizar</button>
                     </div>
                     <ul>
-                      @forelse($portafolio as $portafolioItem)
-                        <h2> {{ $portafolioItem ->title }}</h2>
-                        <p> {{ $portafolioItem ->descripcion }}</p>
+                      @forelse($notas as $nota)
+                        <h2> {{ $nota ->title }}</h2>
+                        <p> {{ $nota ->descripcion }}</p>
+                      
                         @empty
                           <p>No hay proyectos mostrados</p>
                       @endforelse
