@@ -11,7 +11,7 @@
                 </div>
             </div>
         </div>
-        <form action="{{route('loggearme')}}" method="POST" class="bordered shadow border-radius p-5">
+        <form action="{{ route('autenticate') }}" method="POST" class="bordered border-radius p-5">
             <div class="row">
                 @csrf
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 p-2">

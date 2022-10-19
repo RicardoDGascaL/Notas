@@ -14,15 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PagesController@index')->name('login');
-Route::get('/register', 'PagesController@register')->name('registro');
+Route::post('/', 'loginController@authenticate')->name('autenticate');
 
-Route::get('/perfil', 'perfilController@perfil')->name('perfil.index');
-Route::get('/create', 'perfilController@create')->name('perfil.create');
+Route::get('/register', 'PagesController@register')->name('registro');
+Route::post('/register', 'registerController@store')->name('registro.store');
+
+Route::get('/perfil', 'perfilController@perfil')->name('perfil.index')->middleware('auth');
+Route::get('/create', 'perfilController@create')->name('perfil.create')->middleware('auth');
 
 Route::post('/perfil', 'perfilController@store')->name('notas.store');
 
-Route::get('/perfil/{nota}', 'perfilController@show')->name('perfil.show');
+Route::get('/perfil/{nota}', 'perfilController@show')->name('perfil.show')->middleware('auth');
+Route::post('logout', 'LoginController@logout')->name('logout');
 
-
-Route::post('/loggearme', 'PagesController@store')->name('loggearme');
+//Route::post('/loggearme', 'PagesController@store')->name('loggearme');
 

@@ -17,14 +17,17 @@
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-        <button  class="btn btn-danger mx-2">Cerrar Sesión</button>
-        </li>
         <li class="nav-item">
           <a href="/perfil" class="nav-link active" aria-current="page">My Perfil</a>
         </li>
         <li class="nav-item">
           <a href="/create" class="nav-link active" aria-current="page"> Crear Notas</a>
+        </li>
+        <li class="nav-item">
+          <form action="{{ route('logout') }}" method="post">
+            @csrf
+            <button type="submit" class="btn btn-danger mx-2">Cerrar Sesión</button>
+          </form>
         </li>
       </ul>
     </div>

@@ -10,7 +10,7 @@
                 </div>
             </div>
         </div>
-        <form action="{{route('loggearme')}}" method="POST" class="bordered shadow border-radius p-5">
+        <form action="{{route('registro.store')}}" method="POST" class="bordered border-radius p-5">
             <div class="row">
                 @csrf
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -21,13 +21,13 @@
                     </div>
                     <div class="form-group mt-4">
                         <label for="username">Email : </label>
-                        <input type="text" name="Email" class="form-control mt-2" value="{{ old('Email') }}" placeholder="Email" id="Email">
+                        <input type="text" name="email" class="form-control mt-2" value="{{ old('Email') }}" placeholder="Email" id="Email">
                         {!! $errors->first('Email', '<p class="text-danger">:message</p>') !!}
                     </div>
                 
                     <div class="form-group mt-4">
                         <label for="password">Password : </label>
-                        <input type="password" name="passwd" class="form-control mt-2" value="{{ old('password') }}" placeholder="Password" id="password">
+                        <input type="password" name="password" class="form-control mt-2" value="{{ old('password') }}" placeholder="Password" id="password">
                         {!! $errors->first('password', '<p class="text-danger">:message</p>') !!}
                     </div>
                     <div class="form-group mt-4">

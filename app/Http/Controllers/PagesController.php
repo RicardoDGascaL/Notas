@@ -15,7 +15,7 @@ class PagesController extends Controller
         return view('register.register');
     }
 
-    public function store(Request $request){
+    /*public function store(Request $request){
 
         var_dump( $request->input('email') );
         var_dump( $request->input('password') );
@@ -26,8 +26,8 @@ class PagesController extends Controller
             'username' => 'required',
             'Email' => 'required|email',
             'password' => 'required|min:4'
-        ]);*/
+        ]);
 
 
-    }
+    }*/
 }
