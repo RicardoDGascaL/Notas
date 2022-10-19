@@ -26,7 +26,7 @@
                       <input type="text" name="descripcion" class="form-control mt-2 py-5" placeholder="descripcion" id="descripcion">
                   </div>
                   <div class="form-group mt-4">
-                        <button type="submit" class="btn btn-success px-5 py-2 my-2">Agregar Nota</button>
+                        <button type="submit" class="btn btn-primary px-5 py-2 my-2">Agregar Nota</button>
                     </div>
                 </div>
               </div>
