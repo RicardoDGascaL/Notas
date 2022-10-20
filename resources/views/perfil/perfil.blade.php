@@ -15,7 +15,7 @@
                       <p class="p-3">{{ $nota ->descripcion }}</p>
                     <div class="col">
                       <button class="btn btn-danger px-3 py-2 mx-3 my-3">Eliminar</button>
-                      <button class="btn btn-primary px-3 py-2 mx-3 my-3">Actualizar</button>
+                      <button class="btn btn-primary px-3 py-2 mx-3 my-3"><a href="{{ route('perfil.edit', $nota) }}">Actualizar </a></button>
                       <!--<button class="btn btn-success px-3 py-2 mx-3 my-3"><a class="text-light" href="{{ route('perfil.show', $nota) }}">Mostar Nota</a></button>-->
                     </div>
                   </div>

@@ -39,4 +39,23 @@ class perfilController extends Controller
 
         return redirect()->route('perfil.index');
     }
+
+    public function edit(Nota $nota){
+
+        return view('perfil.edit', [
+            'nota' => $nota
+        ]);
+    }
+
+    public function update(Nota $nota){
+
+        $nota -> update([
+            
+            'title' => request('title'),
+            'descripcion' => request('descripcion'),
+        ]);
+
+        return redirect()->route('perfil.index');
+
+    }
 }

@@ -9,6 +9,10 @@
     <style>
       a{
         text-decoration: none;
+        color: white;
+      }
+      a:hover{
+        color:white;
       }
     </style>
 </head>

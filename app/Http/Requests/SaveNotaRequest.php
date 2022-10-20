@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateNotaRequest extends FormRequest
+class SaveNotaRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class CreateNotaRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,17 @@ class CreateNotaRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'required',
+            'descripcion' => 'descripcion',
+        ];
+    }
+
+    public function messages(){
+
+        return [
+
+            'title.required' => 'El proyecto necesita un titulo',
+            'descripcion.required' => 'El proyecto requiere una descripción',
         ];
     }
 }

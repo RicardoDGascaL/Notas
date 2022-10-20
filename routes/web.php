@@ -22,9 +22,12 @@ Route::post('/register', 'registerController@store')->name('registro.store');
 Route::get('/perfil', 'perfilController@perfil')->name('perfil.index')->middleware('auth');
 Route::get('/create', 'perfilController@create')->name('perfil.create')->middleware('auth');
 
-Route::post('/perfil', 'perfilController@store')->name('notas.store');
+Route::get('/editar/{nota}', 'perfilController@edit')->name('perfil.edit')->middleware('auth');
+Route::patch('/editar/{nota}', 'perfilController@update')->name('perfil.update')->middleware('auth');
 
+Route::post('/perfil', 'perfilController@store')->name('notas.store')->middleware('auth');
 Route::get('/perfil/{nota}', 'perfilController@show')->name('perfil.show')->middleware('auth');
+
 Route::post('logout', 'LoginController@logout')->name('logout');
 
 //Route::post('/loggearme', 'PagesController@store')->name('loggearme');
