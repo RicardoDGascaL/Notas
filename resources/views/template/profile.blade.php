@@ -17,7 +17,7 @@
     </style>
 </head>
 <body >
-<nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand bg-dark">
+<nav class="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand bg-dark ">
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">

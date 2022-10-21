@@ -58,4 +58,9 @@ class perfilController extends Controller
         return redirect()->route('perfil.index');
 
     }
+    public function destroy(Nota $nota){
+        $nota->delete();
+
+        return redirect()->route('perfil.index');
+    }
 }

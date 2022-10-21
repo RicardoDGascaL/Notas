@@ -25,6 +25,8 @@ Route::get('/create', 'perfilController@create')->name('perfil.create')->middlew
 Route::get('/editar/{nota}', 'perfilController@edit')->name('perfil.edit')->middleware('auth');
 Route::patch('/editar/{nota}', 'perfilController@update')->name('perfil.update')->middleware('auth');
 
+Route::delete('/perfil/{nota}', 'perfilController@destroy')->name('perfil.destroy');
+
 Route::post('/perfil', 'perfilController@store')->name('notas.store')->middleware('auth');
 Route::get('/perfil/{nota}', 'perfilController@show')->name('perfil.show')->middleware('auth');
 

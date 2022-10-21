@@ -12,9 +12,13 @@
                 <div class="container-fluid mt-5 text-light">
                   <div class="row">
                     <h2 class="text-center">{{ $nota ->title }}</h2>
-                      <p class="p-3">{{ $nota ->descripcion }}</p>
+                      <p class="p-3 text-center">{{ $nota ->descripcion }}</p>
                     <div class="col">
-                      <button class="btn btn-danger px-3 py-2 mx-3 my-3">Eliminar</button>
+                      <form action="{{ route('perfil.destroy', $nota) }}" method="POST">
+                        @csrf @method('DELETE')
+                        <button class="btn btn-danger px-3 py-2 mx-3 my-3">Eliminar</button>
+                      </form>
+                      
                       <button class="btn btn-primary px-3 py-2 mx-3 my-3"><a href="{{ route('perfil.edit', $nota) }}">Actualizar </a></button>
                       <!--<button class="btn btn-success px-3 py-2 mx-3 my-3"><a class="text-light" href="{{ route('perfil.show', $nota) }}">Mostar Nota</a></button>-->
                     </div>
@@ -31,7 +35,7 @@
               <div class="row">
                 <div class="container-fluid mt-5 text-light">
                   <div class="row">
-                    <p class="text-center">No hay proyectos mostrados</p>
+                    <p class="text-center fs-3 pb-3">No hay notas creadas</p>
                   </div>
                 </div>
               </div>
