@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PagesController@index')->name('login');
+Route::get('/', 'PagesController@index')->name('login')->middleware('guest');
 Route::post('/', 'loginController@authenticate')->name('autenticate');
 
-Route::get('/register', 'PagesController@register')->name('registro');
+Route::get('/register', 'PagesController@register')->name('registro')->middleware('guest');
 Route::post('/register', 'registerController@store')->name('registro.store');
 
 Route::get('/perfil', 'perfilController@perfil')->name('perfil.index')->middleware('auth');
