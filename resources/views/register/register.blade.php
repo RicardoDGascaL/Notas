@@ -16,18 +16,18 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="form-group mt-4">
                         <label for="username">Username : </label>
-                        <input type="text" name="username" class="form-control mt-2 py-2" value="{{ old('username') }}" placeholder="Username" id="username">
+                        <input type="text" name="username" class="form-control mt-2 py-2" value="{{ old('username') }}" placeholder="Username" id="username" required>
                         {!! $errors->first('username', '<p class="text-danger">:message</p>') !!}
                     </div>
                     <div class="form-group mt-4">
                         <label for="username">Email : </label>
-                        <input type="text" name="email" class="form-control mt-2 py-2" value="{{ old('Email') }}" placeholder="Email" id="Email">
+                        <input type="text" name="email" class="form-control mt-2 py-2" value="{{ old('Email') }}" placeholder="Email" id="Email" required>
                         {!! $errors->first('Email', '<p class="text-danger">:message</p>') !!}
                     </div>
                 
                     <div class="form-group mt-4">
                         <label for="password">Password : </label>
-                        <input type="password" name="password" class="form-control mt-2 py-2" value="{{ old('password') }}" placeholder="Password" id="password">
+                        <input type="password" name="password" class="form-control mt-2 py-2" value="{{ old('password') }}" placeholder="Password" id="password" required>
                         {!! $errors->first('password', '<p class="text-danger">:message</p>') !!}
                     </div>
                     <div class="form-group mt-4">

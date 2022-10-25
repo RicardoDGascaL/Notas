@@ -19,11 +19,11 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                   <div class="form-group mt-4">
                       <label for="title">Titulo Nota :</label>
-                      <input type="text" name="title" class="form-control mt-2" value="{{ $nota->title }}" placeholder="titulo" id="title">
+                      <input type="text" name="title" class="form-control mt-2" value="{{ $nota->title }}" placeholder="titulo" id="title" required>
                   </div>
                   <div class="form-group mt-4">
                       <label for="Descripcion">Descripcion : </label>
-                      <input type="text" name="descripcion" class="form-control mt-2 py-5" value="{{ $nota->descripcion }}" placeholder="descripcion" id="descripcion">
+                      <input type="text" name="descripcion" class="form-control mt-2 py-5" value="{{ $nota->descripcion }}" placeholder="descripcion" id="descripcion" required>
                   </div>
                   <div class="form-group mt-4">
                         <button type="submit" class="btn btn-primary px-5 py-2 my-2">Agregar cambios</button>

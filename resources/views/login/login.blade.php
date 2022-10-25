@@ -17,14 +17,14 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 p-2">
                     <div class="form-group mt-4">
                         <label for="email">Email : </label>
-                        <input type="text" name="email" class="form-control mt-2 py-2" value="{{ old('email') }}" placeholder="Email" id="email">
+                        <input type="text" name="email" class="form-control mt-2 py-2" value="{{ old('email') }}" placeholder="Email" id="email" required>
                         {!! $errors->first('email', '<p class="text-danger">:message</p>') !!}
                     </div>
                 </div>
                 
                 <div class="form-group mt-4">
                     <label for="password">Password : </label>
-                    <input type="password" name="password" class="form-control mt-2 py-2" value="{{ old('password') }}" placeholder="Password" id="password">
+                    <input type="password" name="password" class="form-control mt-2 py-2" value="{{ old('password') }}" placeholder="Password" id="password" required>
                     {!! $errors->first('password', '<p class="text-danger">:message</p>') !!}
                 </div>
                 <div class="form-group mt-4">
