@@ -26,8 +26,8 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>              
+         </div>
+       </div>         
         @empty
         <div class="row">
           <div class="container-fluid my-5">
