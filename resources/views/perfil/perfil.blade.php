@@ -14,13 +14,11 @@
                     <h2 class="text-center">{{ $nota ->title }}</h2>
                       <p class="p-3 text-center">{{ $nota ->descripcion }}</p>
                     <div class="col">
-                      <form action="{{ route('perfil.destroy', $nota) }}" method="POST">
+                      <form action="{{ route('perfil.destroy', $nota->id) }}" method="POST">
                         @csrf @method('DELETE')
                         <button class="btn btn-danger px-3 py-2 mx-3 my-3">Eliminar</button>
                       </form>
-                      
-                      <button class="btn btn-primary px-3 py-2 mx-3 my-3"><a href="{{ route('perfil.edit', $nota) }}">Actualizar </a></button>
-                      <!--<button class="btn btn-success px-3 py-2 mx-3 my-3"><a class="text-light" href="{{ route('perfil.show', $nota) }}">Mostar Nota</a></button>-->
+                      <button class="btn btn-primary px-3 py-2 mx-3 my-3"><a href="{{ route('perfil.edit', $nota->id) }}">Actualizar </a></button>
                     </div>
                   </div>
                 </div>
