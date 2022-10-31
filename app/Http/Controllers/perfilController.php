@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 Use App\Nota;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class perfilController extends Controller
 {
@@ -35,7 +37,9 @@ class perfilController extends Controller
         Nota::create([
             'title' => request('title'),
             'descripcion' => request('descripcion'),
+            'user_id' => $user_id = Auth::user()->id,
         ]);
+
 
         return redirect()->route('perfil.index');
     }

@@ -15,19 +15,4 @@ class PagesController extends Controller
         return view('register.register');
     }
 
-    /*public function store(Request $request){
-
-        var_dump( $request->input('email') );
-        var_dump( $request->input('password') );
-
-        
-       /* validar campos de login y registro 
-       request()->validate([
-            'username' => 'required',
-            'Email' => 'required|email',
-            'password' => 'required|min:4'
-        ]);
-
-
-    }*/
 }
